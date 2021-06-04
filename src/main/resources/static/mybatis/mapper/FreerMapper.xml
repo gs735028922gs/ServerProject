@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.mo.mapper.FreerMapper">
+
+    <select id="getAll" resultType="Freer">
+        select * from server_project.freer
+    </select>
+
+    <select id="getFreerByName" resultType="Freer" parameterType="string">
+        select * from server_project.freer where fname like #{%name%}
+    </select>
+
+
+    <select id="getFreerById" resultType="Freer" parameterType="int">
+        select * from server_project.freer where fid=#{id}
+    </select>
+
+    <insert id="addFreer" parameterType="Freer">
+        insert into server_project.freer values (#{freer.fid},#{freer.fname},#{freer.ftype},#{freer.phone},#{freer.email},#{freer.schedule})
+    </insert>
+
+    <delete id="removeFreer" parameterType="int">
+        delete from freer where fid=#{id}
+    </delete>
+
+    <update id="updateFreer" parameterType="Freer">
+        update freer set fid=#{freer.fid},fname=#{freer.fname},ftype=#{freer.ftype},phone=#{freer.phone},email=#{freer.email},schedule=#{freer.schedule}
+    </update>
+
+
+
+
+
+</mapper>
