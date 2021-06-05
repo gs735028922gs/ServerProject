@@ -26,4 +26,5 @@ public interface FreerMapper {
 
     int updateFreer(Freer freer);
 
+
 }

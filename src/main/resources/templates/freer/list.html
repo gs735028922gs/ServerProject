@@ -179,9 +179,14 @@
         </nav>
 
         <main role="main" class="col-md-9 ml-sm-auto col-lg-10 pt-3 px-4">
-            <h2>
-                <a class="btn btn-sm btn-success" th:href="@{/freer}">添加员工</a>
-            </h2>
+
+            <form class="form-inline" role="form" th:action="@{/search}">
+                <div class="form-group">
+                    <label class="sr-only" for="name"></label>
+                    <input type="text" class="form-control" id="name" name="name" placeholder="请输入名称">
+                </div>
+                <button type="submit" class="btn btn-default">查询</button>
+            </form>
 
             <div class="table-responsive">
                 <table class="table table-striped table-sm">

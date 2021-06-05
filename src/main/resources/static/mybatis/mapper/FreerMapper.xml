@@ -10,7 +10,7 @@
     </select>
 
     <select id="getFreerByName" resultType="Freer" parameterType="string">
-        select * from server_project.freer where fname like #{%name%}
+        select * from server_project.freer where fname like "%"#{name}"%"
     </select>
 
 
