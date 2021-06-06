@@ -15,6 +15,6 @@ public interface FreerTypeMapper {
 
     Collection<FreerType> getAll();
 
-    int updateFType(FreerType freerType);
+    Collection<FreerType> searchFreerType(String name);
 
 }

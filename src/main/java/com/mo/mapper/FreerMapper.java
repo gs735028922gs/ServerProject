@@ -16,7 +16,7 @@ public interface FreerMapper {
 
     Collection<Freer> getAll();
 
-    Freer getFreerByName(String name);
+    Collection<Freer> getFreerByName(String name);
 
     Freer getFreerById(int id);
 

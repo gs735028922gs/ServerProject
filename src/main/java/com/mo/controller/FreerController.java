@@ -43,9 +43,9 @@ public class FreerController {
     //查询自由人功能
     @RequestMapping("/search")
     public String search(Model model,@RequestParam("name") String name){
-        Freer freer = freerMapper.getFreerByName(name);
-        if(freer != null){
-            model.addAttribute("freer",freer);
+        Collection<Freer> freers = freerMapper.getFreerByName(name);
+        if(freers != null){
+            model.addAttribute("freers",freers);
         }
         return "freer/search";
     }
