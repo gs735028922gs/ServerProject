@@ -37,7 +37,6 @@ public class LoginController {
     }
 
 
-
     //注销
     @RequestMapping("/user/logout")
     public String logout(HttpSession session){
